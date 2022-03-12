@@ -1,4 +1,4 @@
-package com.lh.domain.common.controller;
+package com.lh.domain.main.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class CommonController {
+public class MainController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(CommonController.class);
+	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
 	@RequestMapping(value = {"","/"}, method = RequestMethod.GET)
 	public String main(Model model) {
