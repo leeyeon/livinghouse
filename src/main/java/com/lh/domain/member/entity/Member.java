@@ -9,18 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 
 @Getter
-@Setter
 @ToString
+@NoArgsConstructor
 @Entity
 @Table(name = "member")
 public class Member {
@@ -50,8 +50,20 @@ public class Member {
 	private String address;
 	
 	@CreationTimestamp
-	private LocalDateTime indt;
+	private LocalDateTime indt = LocalDateTime.now();
 	
 	@UpdateTimestamp
 	private LocalDateTime updt;
+
+	@Builder
+	public Member(String loginid, String username, String password, boolean delflag, String phone, String email,
+			String address) {
+		this.loginid = loginid;
+		this.username = username;
+		this.password = password;
+		this.delflag = delflag;
+		this.phone = phone;
+		this.email = email;
+		this.address = address;
+	}
 }
