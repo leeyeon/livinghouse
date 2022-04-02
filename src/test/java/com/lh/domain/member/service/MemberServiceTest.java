@@ -26,10 +26,10 @@ class MemberServiceTest {
 		
 		dto.setLoginid("lyh0208");
 		dto.setPassword("1234");
-		dto.setUsername("ÀÌ¿¬Èñ");
+		dto.setUsername("ì´ì—°í¬");
 		dto.setPhone("01085286534");
 		dto.setEmail("bbqgoood@nate.com");
-		dto.setAddress("¼­¿ïÆ¯º°½Ã ±¤Áø±¸ ¿µÈ­»ç·Î16±æ 34-10 403È£");
+		dto.setAddress("ì„œìš¸íŠ¹ë³„ì‹œ ê´‘ì§„êµ¬");
 		
 		//when
 		Long memberId = memberService.createMember(dto);
